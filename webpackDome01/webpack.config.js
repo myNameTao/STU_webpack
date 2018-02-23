@@ -35,10 +35,11 @@ module.exports = {
        ]
     },
     devServer: {
-        historyApiFallback: true,
-        hot: false,
-        inline: true,
-        progress: true
+        // historyApiFallback: true,
+        // hot: true,
+        // inline: true,
+        // progress: true,
+        // port: 9000
     },
     //添加我们的插件 会自动生成一个html文件
     plugins: [
