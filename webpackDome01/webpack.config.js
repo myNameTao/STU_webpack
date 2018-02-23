@@ -14,6 +14,7 @@ module.exports = {
         path: BUILD_PATH,
         filename: 'bundle.js'
     },
+    //在模板页面引入的框架，全局变量
     externals: {
         'jquery': '$'
     },
@@ -22,22 +23,34 @@ module.exports = {
            {
                test:/\.scss/,
                use:[
-                   {loader:'style-loader'},
-                   {loader:'css-loader'},
-                   {loader:'sass-loader'}
+                   // {loader:'style-loader'},
+                   // {loader:'css-loader'},
+                   // {loader:'sass-loader'}
+                   //或者链式loader
+                   'style-loader',
+                   'css-loader',
+                   'sass-loader'
                ],
                include: APP_PATH
            },
            {
-               test: /\.(png|jpg)$/,
-               loaders: 'url-loader?limit=40000'//limit图片大小限制
+               test: /\.(png|jpg|gif|ico)$/,
+               loader: 'url-loader?limit=3000&name=img/[name].[ext]'
            },
            {
-               test: /\.jsx?$/,
+               test: /\.(eot|woff|woff2|ttf|svg)$/,
+               loader: 'url-loader?limit=3000&name=fonts/[name].[ext]'
+           },
+           {
+               test: /\.(mp3|wav|ogg)$/,
+               loader: 'url-loader?limit=3000&name=audio/[name].[ext]'
+           },
+           {
+               test: /\.(js|jsx)$/,
                loader: 'babel-loader',
                include: APP_PATH,
                query: {
-                   presets: ['es2015']
+                   presets: ['es2015']//, 'stage-0', 'react'
                }
            }
        ]
@@ -51,7 +64,8 @@ module.exports = {
     //添加我们的插件 会自动生成一个html文件
     plugins: [
         new HtmlwebpackPlugin({
-            title: 'Hello World app'
+            title: 'Hello World app',
+            template: './Template/index.html'
         })
     ]
 };

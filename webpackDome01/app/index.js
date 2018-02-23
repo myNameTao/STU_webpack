@@ -3,8 +3,7 @@
  */
 import './main.scss';
 import generateText from './sub';
-import $ from 'jquery';
-import moment from 'moment';
+import $ from 'jquery'
 
 let app  = document.createElement('div');
 app.innerHTML = '<h1>Hello World it</h1>';
