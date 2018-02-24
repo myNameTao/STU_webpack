@@ -61,7 +61,7 @@ module.exports = {
         proxy: webConfig.getAgent(),
         disableHostCheck: true
     },
-    //添加我们的插件 会自动生成一个html文件
+    //添加我们的插件
     plugins: [
         new HtmlwebpackPlugin({
             title: 'Hello World app',

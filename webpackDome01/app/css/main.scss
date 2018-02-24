@@ -1,0 +1,37 @@
+@import "../variables";
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+}
+h1 {
+  color: $red;
+}
+#main {
+  height: 100%;
+  width: 100%;
+}
+.bgImg {
+  background: url("../imgs/878.jpg") no-repeat center;
+  position: fixed;
+  _position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  min-width: 1000px;
+  z-index: -10;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  zoom: 1;
+}
