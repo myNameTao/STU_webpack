@@ -20,6 +20,9 @@ module.exports = {
         path: BUIKD_PATH,
         filename: 'bundle.js'
     },
+    externals: {
+        'jquery': '$'
+    },
     devtool: 'eval-source-map',
     devServer: {//服务代理
         port: webConfig.port,
@@ -30,20 +33,13 @@ module.exports = {
     module:{
         rules: [
             {
-                loader: "babel-loader",
-                include: APP_PATH,
                 test: /\.jsx?$/,
-                query: {
-                    presets: ['es2015', 'react']
-                }
+                use: ['babel-loader'],
+                include: APP_PATH
             },
             {
                 test:/\.scss/,
                 use:[
-                    // {loader:'style-loader'},
-                    // {loader:'css-loader'},
-                    // {loader:'sass-loader'}
-                    //或者链式loader
                     'style-loader',
                     'css-loader',
                     'sass-loader'
