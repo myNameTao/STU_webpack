@@ -10,7 +10,6 @@ export default class Main extends React.Component{
         //this.refreshKeyword = this.refreshKeyword.bind(this);//在元素标签绑定this了，初始化的时候就可以不需要绑定this了
     }
     refreshKeyword(name) {
-        alert('父页面：'+name);
         this.setState({keyword: name});
     }
     render(){

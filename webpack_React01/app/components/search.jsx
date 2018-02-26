@@ -38,7 +38,6 @@ export default class Search extends React.Component{
 
                 }
                 <input type="text"  ref={input => this.inputSearch = input} placeholder="enter the name you wanna search"/>
-                <input type="text"  ref={input => this.inputTest = input} placeholder="test"/>
                 <button onClick={this.handleSearch}>Search</button>
             </div>
         )
