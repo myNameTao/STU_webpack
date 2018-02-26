@@ -3,7 +3,7 @@
 import React from 'react'
 import $ from 'jquery';
 
-export default class Plist extends React.Compontent{
+export default class Plist extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -24,7 +24,7 @@ export default class Plist extends React.Compontent{
      * 当传入的props有变化，请注意看上面第二张图，就是时候发起请求 更新列表的内容了
      */
     componentWillReceiveProps(nextProps){
-        let keyword = nextProps.keyword;
+        let keyword = nextProps.keyword,svar = this;
         //loading设为true，firstView设为false
         this.setState({
             loading: true,
@@ -37,12 +37,12 @@ export default class Plist extends React.Compontent{
             type: 'get',
             dataType: "json",
             success: function(data){
-                this.setState({
+                svar.setState({
                     loading:false,
                     list: data.items
                 });
-            }.bind(this)
-        }.bind(this))
+            }
+        })
     }
     render() {
         const imgStyle = {
