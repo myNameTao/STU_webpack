@@ -6,9 +6,9 @@ let ROOT_PATH = path.resolve(__dirname);
 let APP_PATH = path.resolve(ROOT_PATH, 'src');
 let BUIKD_PATH = path.resolve(ROOT_PATH, 'build');
 let plugins = [];
-let webConfig = require('./app/utils/Config');
+let webConfig = require('./src/utils/Config');
 plugins.push(new HtmlwebpackPlugin({
-	title: 'rect dome',
+	title: 'react router',
 	template: './Template/index.html'
 }));
 
@@ -35,7 +35,7 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 use: ['babel-loader'],
-                include: APP_PATH
+                include: APP_PATH,
             },
             {
                 test:/\.scss/,
