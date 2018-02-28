@@ -9,6 +9,7 @@ import Footer from './components/footer'
 import ShoopCar from './components/shoopCar'
 import Message from './components/message'
 import User from './components/user'
+require('./css/common.scss');
 
 
 render((
