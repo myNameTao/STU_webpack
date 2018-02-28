@@ -10,7 +10,8 @@ export default class HomeBody extends React.Component{
     render(){
         return(
             <div>
-                <Link to="/HomeBodyList">HomeBodyList</Link>
+                <Link to="/HomeBody/HomeBodyList/123/holle">HomeBodyList</Link>
+                {this.props.children}
             </div>
         )
     }

@@ -10,6 +10,8 @@ export default class HomeBodyList extends React.Component{
         return(
             <div>
                 <ul>
+                    <li>id:{this.props.params.id}</li>
+                    <li>name:{this.props.params.name}</li>
                     <li>服装</li>
                     <li>服装</li>
                     <li>服装</li>
