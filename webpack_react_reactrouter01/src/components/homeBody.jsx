@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import { Link } from 'react-router'
 
 export default class HomeBody extends React.Component{
     constructor(props){
@@ -8,7 +9,9 @@ export default class HomeBody extends React.Component{
     }
     render(){
         return(
-            <div>主页body</div>
+            <div>
+                <Link to="/HomeBodyList">HomeBodyList</Link>
+            </div>
         )
     }
 }

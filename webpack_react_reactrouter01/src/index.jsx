@@ -4,25 +4,21 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 import Home from './components/home'
 import HomeHeader from './components/homeHeader'
 import HomeBody from './components/homeBody'
+import HomeBodyList from './components/homeBodyList'
 import Footer from './components/footer'
 import ShoopCar from './components/shoopCar'
 import Message from './components/message'
 import User from './components/user'
 
-import App from './modules/App'
-import About from './modules/About'
-import Repos from './modules/Repos'
 
 render((
     <Router history={hashHistory}>
         <Route path="/" component={Home}>
-            <Route path="/HomeHeader" compontent={HomeHeader} />
-            <Route path="/HomeBody" compontent={HomeBody} />
-            <Route path="/Footer" compontent={Footer} />
-        </Route>
-        <Route path="/App" component={App}>
-            <Route path="/Repos" component={Repos}/>
-            <Route path="/About" component={About}/>
+            <Route path="/HomeHeader" component={HomeHeader} />
+            <Route path="/HomeBody" component={HomeBody} >
+                <Route path="/HomeBodyList" component={HomeBodyList}/>
+            </Route>
+            <Route path="/Footer" component={Footer} />
         </Route>
         <Route path="/ShoopCar" component={ShoopCar}>
 
