@@ -3,6 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router'
 import NavLink from './NavLink'
+import Defalut from './Defalut'
 
 export default class Home extends React.Component{
     constructor(props){
@@ -21,7 +22,11 @@ export default class Home extends React.Component{
                     <li><NavLink to="/HomeBody" >HomeBody</NavLink></li>
                     <li><Link to="/Footer" activeClassName="lk-HomeBody">Footer</Link></li>
                 </ul>
-                {this.props.children}
+                {
+                    //如果路由配置处使用 <IndexRoute component={Defalut} /> 此处就应该写{ this.props.children }
+                }
+                {/*{this.props.children  || <Defalut/>}*/}
+                {this.props.children }
             </div>
         )
     }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, IndexRoute, hashHistory } from 'react-router'
+import { Router, Route, IndexRoute, hashHistory, IndexRoute } from 'react-router'
 import Home from './components/home'
 import HomeHeader from './components/homeHeader'
 import HomeBody from './components/homeBody'
@@ -9,12 +9,14 @@ import Footer from './components/footer'
 import ShoopCar from './components/shoopCar'
 import Message from './components/message'
 import User from './components/user'
+import Defalut from './components/Defalut'
 require('./css/common.scss');
 
 
 render((
     <Router history={hashHistory}>
         <Route path="/" component={Home}>
+            {/*<IndexRoute component={Defalut}/>*/}
             <Route path="/HomeHeader" component={HomeHeader} />
             <Route path="/HomeBody" component={HomeBody} >
                 <Route path="/HomeBody/:id(/:name)" component={HomeBodyList}/>
