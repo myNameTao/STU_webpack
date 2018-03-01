@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router'
+import NavLink from './NavLink'
 
 export default class HomeBody extends React.Component{
     constructor(props){
@@ -10,7 +11,7 @@ export default class HomeBody extends React.Component{
     render(){
         return(
             <div>
-                <Link to="/HomeBody/HomeBodyList/123/holle">HomeBodyList</Link>
+                <NavLink to="/HomeBody/123/holle">HomeBodyList</NavLink>
                 {this.props.children}
             </div>
         )

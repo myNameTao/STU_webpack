@@ -17,7 +17,7 @@ render((
         <Route path="/" component={Home}>
             <Route path="/HomeHeader" component={HomeHeader} />
             <Route path="/HomeBody" component={HomeBody} >
-                <Route path="/HomeBody/HomeBodyList/:id(/:name)" component={HomeBodyList}/>
+                <Route path="/HomeBody/:id(/:name)" component={HomeBodyList}/>
             </Route>
             <Route path="/Footer" component={Footer} />
         </Route>
