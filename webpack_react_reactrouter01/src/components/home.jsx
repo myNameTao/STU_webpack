@@ -25,8 +25,8 @@ export default class Home extends React.Component{
                 {
                     //如果路由配置处使用 <IndexRoute component={Defalut} /> 此处就应该写{ this.props.children }
                 }
-                {/*{this.props.children  || <Defalut/>}*/}
-                {this.props.children }
+                {this.props.children  || <Defalut/>}
+                {/*{this.props.children }*/}
             </div>
         )
     }
