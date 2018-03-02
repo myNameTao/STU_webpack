@@ -7,3 +7,8 @@
         对于根路由来说，activeStyle和activeClassName会失效，或者说总是生效，因为/会匹配任何子路由。而IndexLink组件会使用路径的精确匹配。
         另一种方法是使用Link组件的onlyActiveOnIndex属性，也能达到同样效果。
         实际上，IndexLink就是对Link组件的onlyActiveOnIndex属性的包装。
+    6、browserHistory显示正常的路径，hashHistory路由将通过URL的hash部分（#）切换；
+        使用browserHistory需要修改一些
+            1、这种情况需要对服务器改造src="bundle.js"=>src="/bundle.js"，不然会找不到文件报404
+                注意：在模板html中修改引入的样式文件、打包的js文件
+            2、如果使用的是webpack-dev-server 就需要在配置文件中加--history-api-fallback参数

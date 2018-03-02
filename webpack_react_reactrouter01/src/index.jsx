@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, IndexRoute, hashHistory  } from 'react-router'
+import { Router, Route, IndexRoute, browserHistory, hashHistory  } from 'react-router'
 import Home from './components/home'
 import HomeHeader from './components/homeHeader'
 import HomeBody from './components/homeBody'
@@ -14,7 +14,7 @@ require('./css/common.scss');
 
 
 render((
-    <Router history={hashHistory}>
+    <Router history={browserHistory}>
         <Route path="/" component={Home}>
             {/*<IndexRoute component={Defalut}/>*/}
             <Route path="/HomeHeader" component={HomeHeader} />
