@@ -15,7 +15,7 @@ require('./css/common.scss');
 
 
 render((
-    <Router history={browserHistory}>
+    <Router history={hashHistory}>
         <Route path="/" component={Home}>
             {/*<IndexRoute component={Defalut}/>*/}
             {/*IndexRedirect访问根路由时重定向到某个子路由去*/}
@@ -23,7 +23,7 @@ render((
             <Route path="/HomeHeader" component={HomeHeader} />
             <Route path="/HomeBody" component={HomeBody} >
                 {/*<Route path="/HomeBody/:id(/:name)" component={HomeBodyList}/>*/}
-                <Redirect from="/homeBodyList/:id(/:name)" to="/homeBodyList_T/:id(/:name)"/>
+                {/*<Redirect from="/homeBodyList/:id(/:name)" to="/homeBodyList_T/:id(/:name)"/>*/}
                 <Route path="/homeBodyList/:id(/:name)" component={HomeBodyList}/>
                 <Route path="/homeBodyList_T/:id(/:name)" component={homeBodyList_T}/>
             </Route>
