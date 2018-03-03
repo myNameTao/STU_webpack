@@ -12,3 +12,6 @@
             1、这种情况需要对服务器改造src="bundle.js"=>src="/bundle.js"，不然会找不到文件报404
                 注意：在模板html中修改引入的样式文件、打包的js文件
             2、如果使用的是webpack-dev-server 就需要在配置文件中加--history-api-fallback参数
+    7、Redirect 组件用于路由的跳转，即用户访问一个路由，会自动跳转到另一个路由。
+        注意：重定向了一个新的地址，所以必须有一个对应的新的地址的Route，也就是在写<Redirect />同级要有重定向的<Route />
+    8、IndexRedirect访问根路由时重定向到某个子路由去
